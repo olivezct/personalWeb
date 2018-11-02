@@ -1,0 +1,35 @@
+<!-- tp5首页 -->
+{extend  name="./template/base1.html" /}
+{block name="header"}
+
+{/block}
+
+{block name="replace"}
+    <h3>tp5首页</h3>
+{/block}
+
+{block name="footer"}
+    <script>
+
+        $(function(){
+            $('h3').append('<h2>18665746626</h2>');
+
+            
+            $.ajax({
+                url: "/home/index/getContestInfo",
+                type: 'get',
+                data:{"name":1},
+                dataType: "json",
+                success: function (data) {
+
+                        $('h3').append(1);
+                },
+                error: function (data) {
+                }
+            });
+
+        })
+
+
+    </script>
+{/block}
